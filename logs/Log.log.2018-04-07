@@ -1,0 +1,29 @@
+2018-04-07 16:11:27 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-04-07 16:11:28 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 5884 (started by Qalib in E:\Spring projects\apds)
+2018-04-07 16:11:28 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-04-07 16:11:28 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e9a5fbe: startup date [Sat Apr 07 16:11:28 AZST 2018]; root of context hierarchy
+2018-04-07 16:11:31 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 9090 (http)
+2018-04-07 16:11:32 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 3620 ms
+2018-04-07 16:11:32 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-04-07 16:11:32 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-07 16:11:32 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-07 16:11:32 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-07 16:11:32 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-07 16:11:33 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e9a5fbe: startup date [Sat Apr 07 16:11:28 AZST 2018]; root of context hierarchy
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/sensor/checkStatus],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.SensorController.checkStatus(java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/sensor/sendData],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.SensorController.sendData(java.lang.String,double,double,double,double)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/sensor/checkSensor],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/register],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/verify/sms],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.start(java.lang.String,java.lang.String,java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/sendMsisdn],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.sendMsisdn(java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/getLastData],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.getLastData(java.lang.String,java.lang.String)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-07 16:11:33 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-07 16:11:33 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 16:11:33 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 16:11:33 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-07 16:11:33 INFO  AnnotationMBeanExporter:434 - Registering beans for JMX exposure on startup
+2018-04-07 16:11:33 INFO  AnnotationMBeanExporter:896 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-07 16:11:33 INFO  AnnotationMBeanExporter:669 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-07 16:11:33 INFO  TomcatWebServer:205 - Tomcat started on port(s): 9090 (http) with context path '/apds'
+2018-04-07 16:11:33 INFO  ApdsApplication:59 - Started ApdsApplication in 6.734 seconds (JVM running for 10.24)

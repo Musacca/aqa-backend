@@ -1,0 +1,256 @@
+2018-03-20 12:38:20 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-03-20 12:38:20 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 11480 (started by Qalib in E:\Spring projects\apds)
+2018-03-20 12:38:20 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-03-20 12:38:20 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1445d7f: startup date [Tue Mar 20 12:38:20 AZT 2018]; root of context hierarchy
+2018-03-20 12:38:22 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8585 (http)
+2018-03-20 12:38:22 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 1828 ms
+2018-03-20 12:38:22 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-03-20 12:38:22 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 12:38:22 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 12:38:22 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 12:38:22 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 12:38:22 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1445d7f: startup date [Tue Mar 20 12:38:20 AZT 2018]; root of context hierarchy
+2018-03-20 12:38:23 WARN  AnnotationConfigServletWebServerApplicationContext:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-03-20 12:38:23 INFO  ConditionEvaluationReportLoggingListener:101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-03-20 12:38:23 ERROR SpringApplication:833 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1710)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$83/404214852.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234)
+	at com.dev.apds.ApdsApplication.main(ApdsApplication.java:10)
+Caused by: java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:242)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$259/1590792382.inspect(Unknown Source)
+	at org.springframework.core.MethodIntrospector.lambda$selectMethods$0(MethodIntrospector.java:71)
+	at org.springframework.core.MethodIntrospector$$Lambda$260/2108440536.doWith(Unknown Source)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:562)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:69)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:235)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	... 17 more
+Caused by: org.springframework.http.InvalidMediaTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:512)
+	at org.springframework.web.servlet.mvc.condition.AbstractMediaTypeExpression.<init>(AbstractMediaTypeExpression.java:51)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition$ProduceMediaTypeExpression.<init>(ProducesRequestCondition.java:324)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.parseExpressions(ProducesRequestCondition.java:125)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.<init>(ProducesRequestCondition.java:95)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfo$DefaultBuilder.build(RequestMappingInfo.java:501)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:269)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:214)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:56)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:238)
+	... 28 more
+Caused by: org.springframework.util.InvalidMimeTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.util.MimeTypeUtils.parseMimeType(MimeTypeUtils.java:193)
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:509)
+	... 38 more
+2018-03-20 12:38:55 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-03-20 12:38:55 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 4956 (started by Qalib in E:\Spring projects\apds)
+2018-03-20 12:38:55 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-03-20 12:38:55 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5579bb86: startup date [Tue Mar 20 12:38:55 AZT 2018]; root of context hierarchy
+2018-03-20 12:38:57 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8585 (http)
+2018-03-20 12:38:57 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 2027 ms
+2018-03-20 12:38:57 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-03-20 12:38:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 12:38:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 12:38:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 12:38:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 12:38:58 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5579bb86: startup date [Tue Mar 20 12:38:55 AZT 2018]; root of context hierarchy
+2018-03-20 12:38:58 WARN  AnnotationConfigServletWebServerApplicationContext:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-03-20 12:38:58 INFO  ConditionEvaluationReportLoggingListener:101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-03-20 12:38:58 ERROR SpringApplication:833 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1710)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$90/831236296.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234)
+	at com.dev.apds.ApdsApplication.main(ApdsApplication.java:10)
+Caused by: java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:242)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$259/709439274.inspect(Unknown Source)
+	at org.springframework.core.MethodIntrospector.lambda$selectMethods$0(MethodIntrospector.java:71)
+	at org.springframework.core.MethodIntrospector$$Lambda$260/1280128554.doWith(Unknown Source)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:562)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:69)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:235)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	... 17 more
+Caused by: org.springframework.http.InvalidMediaTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:512)
+	at org.springframework.web.servlet.mvc.condition.AbstractMediaTypeExpression.<init>(AbstractMediaTypeExpression.java:51)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition$ProduceMediaTypeExpression.<init>(ProducesRequestCondition.java:324)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.parseExpressions(ProducesRequestCondition.java:125)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.<init>(ProducesRequestCondition.java:95)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfo$DefaultBuilder.build(RequestMappingInfo.java:501)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:269)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:214)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:56)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:238)
+	... 28 more
+Caused by: org.springframework.util.InvalidMimeTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.util.MimeTypeUtils.parseMimeType(MimeTypeUtils.java:193)
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:509)
+	... 38 more
+2018-03-20 12:40:02 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-03-20 12:40:03 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 10696 (started by Qalib in E:\Spring projects\apds)
+2018-03-20 12:40:03 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-03-20 12:40:03 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@103f852: startup date [Tue Mar 20 12:40:03 AZT 2018]; root of context hierarchy
+2018-03-20 12:40:05 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8585 (http)
+2018-03-20 12:40:05 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 2354 ms
+2018-03-20 12:40:05 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-03-20 12:40:05 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 12:40:05 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 12:40:05 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 12:40:05 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 12:40:06 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@103f852: startup date [Tue Mar 20 12:40:03 AZT 2018]; root of context hierarchy
+2018-03-20 12:40:06 WARN  AnnotationConfigServletWebServerApplicationContext:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-03-20 12:40:06 INFO  ConditionEvaluationReportLoggingListener:101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-03-20 12:40:06 ERROR SpringApplication:833 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1710)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$90/1374026904.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234)
+	at com.dev.apds.ApdsApplication.main(ApdsApplication.java:10)
+Caused by: java.lang.IllegalStateException: Invalid mapping on handler class [com.dev.apds.controllers.SensorController]: public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:242)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$259/273777019.inspect(Unknown Source)
+	at org.springframework.core.MethodIntrospector.lambda$selectMethods$0(MethodIntrospector.java:71)
+	at org.springframework.core.MethodIntrospector$$Lambda$260/1296109622.doWith(Unknown Source)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:562)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:69)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:235)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	... 17 more
+Caused by: org.springframework.http.InvalidMediaTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:512)
+	at org.springframework.web.servlet.mvc.condition.AbstractMediaTypeExpression.<init>(AbstractMediaTypeExpression.java:51)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition$ProduceMediaTypeExpression.<init>(ProducesRequestCondition.java:324)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.parseExpressions(ProducesRequestCondition.java:125)
+	at org.springframework.web.servlet.mvc.condition.ProducesRequestCondition.<init>(ProducesRequestCondition.java:95)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfo$DefaultBuilder.build(RequestMappingInfo.java:501)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:269)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:214)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:56)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$0(AbstractHandlerMethodMapping.java:238)
+	... 28 more
+Caused by: org.springframework.util.InvalidMimeTypeException: Invalid mime type "application-json": does not contain '/'
+	at org.springframework.util.MimeTypeUtils.parseMimeType(MimeTypeUtils.java:193)
+	at org.springframework.http.MediaType.parseMediaType(MediaType.java:509)
+	... 38 more
+2018-03-20 12:40:55 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-03-20 12:40:56 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 10660 (started by Qalib in E:\Spring projects\apds)
+2018-03-20 12:40:56 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-03-20 12:40:56 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@376b4233: startup date [Tue Mar 20 12:40:56 AZT 2018]; root of context hierarchy
+2018-03-20 12:40:57 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8585 (http)
+2018-03-20 12:40:57 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 1245 ms
+2018-03-20 12:40:57 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-03-20 12:40:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 12:40:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 12:40:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 12:40:57 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 12:40:58 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@376b4233: startup date [Tue Mar 20 12:40:56 AZT 2018]; root of context hierarchy
+2018-03-20 12:40:58 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/sensor/checkSensor],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-03-20 12:40:58 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/register],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.register()
+2018-03-20 12:40:58 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-20 12:40:58 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-20 12:40:58 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:40:58 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:40:58 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:40:58 INFO  AnnotationMBeanExporter:434 - Registering beans for JMX exposure on startup
+2018-03-20 12:40:58 INFO  AnnotationMBeanExporter:896 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-03-20 12:40:58 INFO  AnnotationMBeanExporter:669 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-03-20 12:40:58 INFO  TomcatWebServer:205 - Tomcat started on port(s): 8585 (http) with context path ''
+2018-03-20 12:40:58 INFO  ApdsApplication:59 - Started ApdsApplication in 3.995 seconds (JVM running for 4.965)
+2018-03-20 12:41:03 INFO  DispatcherServlet:494 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-20 12:41:03 INFO  DispatcherServlet:513 - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-03-20 12:43:02 INFO  Version:21 - HV000001: Hibernate Validator 6.0.7.Final
+2018-03-20 12:43:03 INFO  ApdsApplication:50 - Starting ApdsApplication on HP with PID 11984 (started by Qalib in E:\Spring projects\apds)
+2018-03-20 12:43:03 INFO  ApdsApplication:652 - No active profile set, falling back to default profiles: default
+2018-03-20 12:43:03 INFO  AnnotationConfigServletWebServerApplicationContext:589 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@704d6e83: startup date [Tue Mar 20 12:43:03 AZT 2018]; root of context hierarchy
+2018-03-20 12:43:04 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8585 (http)
+2018-03-20 12:43:04 INFO  ContextLoader:285 - Root WebApplicationContext: initialization completed in 1515 ms
+2018-03-20 12:43:04 INFO  ServletRegistrationBean:185 - Servlet dispatcherServlet mapped to [/]
+2018-03-20 12:43:04 INFO  FilterRegistrationBean:243 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 12:43:04 INFO  FilterRegistrationBean:243 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 12:43:04 INFO  FilterRegistrationBean:243 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 12:43:04 INFO  FilterRegistrationBean:243 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 12:43:05 INFO  RequestMappingHandlerAdapter:567 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@704d6e83: startup date [Tue Mar 20 12:43:03 AZT 2018]; root of context hierarchy
+2018-03-20 12:43:05 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/sensor/checkSensor],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.SensorController.checkSensor(java.lang.String)
+2018-03-20 12:43:05 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/user/register],methods=[POST],produces=[application/json]}" onto public java.util.Map com.dev.apds.controllers.UserController.register()
+2018-03-20 12:43:05 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-20 12:43:05 INFO  RequestMappingHandlerMapping:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-20 12:43:05 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:43:05 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:43:05 INFO  SimpleUrlHandlerMapping:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 12:43:05 INFO  AnnotationMBeanExporter:434 - Registering beans for JMX exposure on startup
+2018-03-20 12:43:05 INFO  AnnotationMBeanExporter:896 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-03-20 12:43:05 INFO  AnnotationMBeanExporter:669 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-03-20 12:43:05 INFO  TomcatWebServer:205 - Tomcat started on port(s): 8585 (http) with context path '/apds'
+2018-03-20 12:43:05 INFO  ApdsApplication:59 - Started ApdsApplication in 3.579 seconds (JVM running for 4.862)
+2018-03-20 12:43:10 INFO  DispatcherServlet:494 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-20 12:43:10 INFO  DispatcherServlet:513 - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-03-20 12:43:10 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2018-03-20 12:43:11 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2018-03-20 14:48:12 WARN  HikariPool:756 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m31s439ms964µs519ns).
